@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/pixmm-common/pixmm-common.iml" filepath="$PROJECT_DIR$/pixmm-common/pixmm-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pixmm-manager/pixmm-manager.iml" filepath="$PROJECT_DIR$/pixmm-manager/pixmm-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pixmm-manager/pixmm-manager-dao/pixmm-manager-dao.iml" filepath="$PROJECT_DIR$/pixmm-manager/pixmm-manager-dao/pixmm-manager-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pixmm-manager/pixmm-manager-pojo/pixmm-manager-pojo.iml" filepath="$PROJECT_DIR$/pixmm-manager/pixmm-manager-pojo/pixmm-manager-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pixmm-manager/pixmm-manager-service/pixmm-manager-service.iml" filepath="$PROJECT_DIR$/pixmm-manager/pixmm-manager-service/pixmm-manager-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pixmm-manager/pixmm-manager-web/pixmm-manager-web.iml" filepath="$PROJECT_DIR$/pixmm-manager/pixmm-manager-web/pixmm-manager-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pixmm-parent.iml" filepath="$PROJECT_DIR$/pixmm-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pixmm-portal/pixmm-portal.iml" filepath="$PROJECT_DIR$/pixmm-portal/pixmm-portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pixmm-rest/pixmm-rest.iml" filepath="$PROJECT_DIR$/pixmm-rest/pixmm-rest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pixmm-rest-api/pixmm-rest-api.iml" filepath="$PROJECT_DIR$/pixmm-rest-api/pixmm-rest-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pixmm-search/pixmm-search.iml" filepath="$PROJECT_DIR$/pixmm-search/pixmm-search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pixmm-search-api/pixmm-search-api.iml" filepath="$PROJECT_DIR$/pixmm-search-api/pixmm-search-api.iml" />
+    </modules>
+  </component>
+</project>

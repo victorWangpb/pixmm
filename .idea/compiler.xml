@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="pixmm-common" />
+        <module name="pixmm-manager-dao" />
+        <module name="pixmm-manager-pojo" />
+        <module name="pixmm-manager-service" />
+        <module name="pixmm-manager-web" />
+        <module name="pixmm-portal" />
+        <module name="pixmm-rest" />
+        <module name="pixmm-rest-api" />
+        <module name="pixmm-search" />
+        <module name="pixmm-search-api" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="pixmm-common" target="1.7" />
+      <module name="pixmm-manager" target="1.7" />
+      <module name="pixmm-manager-dao" target="1.7" />
+      <module name="pixmm-manager-pojo" target="1.7" />
+      <module name="pixmm-manager-service" target="1.7" />
+      <module name="pixmm-manager-web" target="1.7" />
+      <module name="pixmm-parent" target="1.7" />
+      <module name="pixmm-portal" target="1.7" />
+      <module name="pixmm-portals" target="1.7" />
+      <module name="pixmm-rest" target="1.7" />
+      <module name="pixmm-rest-api" target="1.7" />
+      <module name="pixmm-search" target="1.7" />
+      <module name="pixmm-search-api" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,3 @@
+com\ydhd\pixmm\rest\service\impl\ItemCatServiceImpl.class
+com\ydhd\pixmm\rest\service\ItemCatService.class
+com\ydhd\pixmm\rest\facade\impl\ItemCatFacadeImpl.class

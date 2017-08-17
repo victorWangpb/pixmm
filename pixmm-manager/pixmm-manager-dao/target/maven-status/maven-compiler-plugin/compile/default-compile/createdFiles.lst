@@ -1,0 +1,11 @@
+com\ydhd\pixmm\dao\TbContentCategoryMapper.class
+com\ydhd\pixmm\dao\TbItemDescMapper.class
+com\ydhd\pixmm\dao\TbItemParamMapper.class
+com\ydhd\pixmm\dao\TbOrderItemMapper.class
+com\ydhd\pixmm\dao\TbItemMapper.class
+com\ydhd\pixmm\dao\TbItemParamItemMapper.class
+com\ydhd\pixmm\dao\TbContentMapper.class
+com\ydhd\pixmm\dao\TbOrderMapper.class
+com\ydhd\pixmm\dao\TbUserMapper.class
+com\ydhd\pixmm\dao\TbOrderShippingMapper.class
+com\ydhd\pixmm\dao\TbItemCatMapper.class

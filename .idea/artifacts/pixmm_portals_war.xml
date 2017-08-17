@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="pixmm-portals:war">
+    <output-path>$PROJECT_DIR$/pixmm-portals/target</output-path>
+    <root id="archive" name="pixmm-portals.war">
+      <element id="artifact" artifact-name="pixmm-portals:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="pixmm-manager-web:war">
+    <output-path>$PROJECT_DIR$/pixmm-manager/pixmm-manager-web/target</output-path>
+    <root id="archive" name="pixmm-manager-web.war">
+      <element id="artifact" artifact-name="pixmm-manager-web:war exploded" />
+    </root>
+  </artifact>
+</component>
