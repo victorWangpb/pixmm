@@ -3,6 +3,7 @@ package com.ydhd.pixmm.controller;
 import com.ydhd.pixmm.pojo.EasyUIDataGridResult;
 import com.ydhd.pixmm.pojo.TbItem;
 import com.ydhd.pixmm.pojo.TbItemDesc;
+import com.ydhd.pixmm.pojo.TbItemParamItem;
 import com.ydhd.pixmm.service.ItemService;
 import com.ydhd.pixmm.utils.PixmmResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,6 +43,13 @@ public class ItemController {
         return result;
     }
 
+    @RequestMapping(value="/rest/item/update", method= RequestMethod.POST)
+    @ResponseBody
+    public PixmmResult updateItem(TbItem item, String desc,String itemParams) {
+        PixmmResult result = itemService.updateItem(item, desc,itemParams);
+        return result;
+    }
+
     @RequestMapping("/showitem/{itemId}")
     public String showItemParam(@PathVariable Long itemId, Model model) {
         String html = itemService.getItemParamHtml(itemId);
@@ -51,8 +59,18 @@ public class ItemController {
 
     @RequestMapping("/rest/item/query/item/desc/{itemId}")
     @ResponseBody
-    public TbItemDesc getItemDescByItemid(@PathVariable Long itemId){
-         return itemService.getItemDescByItemId(itemId);
+    public PixmmResult getItemDescByItemid(@PathVariable Long itemId){
+        TbItemDesc itemDesc = itemService.getItemDescByItemId(itemId);
+
+        return PixmmResult.ok(itemDesc);
+
+    }
+
+    @RequestMapping("/rest/item/query/item/param/{itemId}")
+    @ResponseBody
+    public PixmmResult getItemParamItemByItemid(@PathVariable Long itemId){
+        TbItemParamItem itemParamItem = itemService.getItemParamItemByItemId(itemId);
+        return PixmmResult.ok(itemParamItem);
     }
 
 

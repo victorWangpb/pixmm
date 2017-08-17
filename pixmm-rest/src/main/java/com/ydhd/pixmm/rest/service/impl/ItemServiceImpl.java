@@ -1,5 +1,7 @@
 package com.ydhd.pixmm.rest.service.impl;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ydhd.pixmm.dao.TbItemDescMapper;
 import com.ydhd.pixmm.dao.TbItemMapper;
 import com.ydhd.pixmm.dao.TbItemParamItemMapper;
@@ -16,6 +18,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -31,6 +34,7 @@ public class ItemServiceImpl implements ItemService {
     private TbItemParamItemMapper itemParamItemMapper;
     @Autowired
     private JedisClient jedisClient;
+
 
     @Value("${REDIS_ITEM_KEY}")
     private String REDIS_ITEM_KEY;
@@ -67,11 +71,13 @@ public class ItemServiceImpl implements ItemService {
         TbItem item = itemMapper.selectByPrimaryKey(itemId);
         try {
 
-            String json = JsonUtils.objectToJson(item);
+            String json = JsonUtils.objectToJson(PixmmResult.ok(item));
             PixmmResult result = PixmmResult.formatToPojo(json, ItemInfo.class);
+
             itemInfo= (ItemInfo) result.getData();
         }catch (Exception e){
             e.printStackTrace();
+            return null;
 
         }
 
@@ -160,8 +166,6 @@ public class ItemServiceImpl implements ItemService {
         return null;
     }
 
-    public void manageItemCache(){
 
-    }
 
 }

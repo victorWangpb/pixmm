@@ -32,7 +32,7 @@
         <property name="basePackage" value="com.ydhd.pixmm.dao" />
     </bean>
 
-    <context:component-scan base-package="com.ydhd.pixmm.search.dao"/>
+    <context:component-scan base-package="com.ydhd.pixmm.search.dao,com.ydhd.pixmm.search.service.impl"/>
     <bean id="httpSolrServer" class="org.apache.solr.client.solrj.impl.HttpSolrServer">
         <constructor-arg name="baseURL" value="http://192.168.91.132:8081/solr"/>
     </bean>

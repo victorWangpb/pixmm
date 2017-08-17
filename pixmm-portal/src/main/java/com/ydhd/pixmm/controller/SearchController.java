@@ -3,14 +3,11 @@ package com.ydhd.pixmm.controller;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.ydhd.pixmm.search.facade.SearchFacade;
 import com.ydhd.pixmm.search.pojo.SearchResult;
-import com.ydhd.pixmm.utils.ExceptionUtil;
-import com.ydhd.pixmm.utils.PixmmResult;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * Created by 王朋波 on 2017/8/14.

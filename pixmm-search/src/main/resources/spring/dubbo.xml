@@ -24,10 +24,10 @@
 	<!-- 应用信息，用于计算依赖关系 -->
 	<dubbo:application name="pixmm-search" />
 	<dubbo:protocol name="dubbo" port="20882" ></dubbo:protocol>
-
 	<!-- 使用zookeeper注册中心暴露服务地址 -->
 	<dubbo:registry protocol="zookeeper" address="${dubbo.registry.address}" />
-	
-	<dubbo:annotation package="com.ydhd.pixmm.search.facade.impl"/>
-	
+	<dubbo:annotation package="com.ydhd.pixmm.search.facade.impl,com.ydhd.pixmm.search.service.impl"/>
+	<!--<dubbo:registry check="false"/>-->
+	<!--<dubbo:reference id="itemFacade" interface="com.ydhd.pixmm.rest.facade.ItemFacade"/>-->
+
 </beans>

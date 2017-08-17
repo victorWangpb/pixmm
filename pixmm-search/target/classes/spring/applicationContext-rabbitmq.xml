@@ -1,0 +1,28 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rabbit="http://www.springframework.org/schema/rabbit"
+	xsi:schemaLocation="http://www.springframework.org/schema/rabbit
+	http://www.springframework.org/schema/rabbit/spring-rabbit-1.4.xsd
+	http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	
+	<!-- 定义RabbitMQ的连接工厂 -->
+	<rabbit:connection-factory id="connectionFactory"
+		host="192.168.91.132" port="5672" username="root" password="root"
+		virtual-host="/pixmm" />
+
+	<!--定义管理-->
+	<rabbit:admin connection-factory="connectionFactory"/>
+
+	<!--定义队列-->
+	<rabbit:queue name="pixmm-search-queue" auto-declare="true" durable="false"/>
+
+	<bean id="itemService" class="com.ydhd.pixmm.search.service.impl.RabbitmqService"/>
+
+	<!--定义消费者监听队列-->
+	<rabbit:listener-container connection-factory="connectionFactory">
+		<rabbit:listener ref="itemService" method="synSolrItem"  queue-names="pixmm-search-queue"/>
+	</rabbit:listener-container>
+
+
+
+</beans>

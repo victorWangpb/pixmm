@@ -16,7 +16,7 @@ public class IndexController {
     @Reference
     private ContentFacade contentFacade;
 
-    @RequestMapping("/index")
+    @RequestMapping("/")
     public  String showIndex(Model model){
         String json=contentFacade.getAdList();
         model.addAttribute("ad1",json);

@@ -25,7 +25,7 @@
 	<!-- 使用zookeeper注册中心暴露服务地址 -->
 	<dubbo:registry protocol="zookeeper" address="${dubbo.registry.address}" />
     <dubbo:annotation/>
-
+	<!--<dubbo:registry check="false"/>-->
 
 	
 </beans>

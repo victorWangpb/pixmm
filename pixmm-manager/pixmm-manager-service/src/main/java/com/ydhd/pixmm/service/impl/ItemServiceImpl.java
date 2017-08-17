@@ -117,6 +117,48 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
+    public PixmmResult updateItem(TbItem item, String desc, String itemParam) {
+
+        item.setUpdated(new Date());
+        // 更新商品表
+        itemMapper.updateByPrimaryKeySelective(item);
+
+        // 商品描述
+        TbItemDesc itemDesc = new TbItemDesc();
+        itemDesc.setItemId(item.getId());
+        itemDesc.setItemDesc(desc);
+        itemDesc.setUpdated(new Date());
+        // 更新商品描述数据
+        itemDescMapper.updateByPrimaryKeySelective(itemDesc);
+
+        //更新商品规格参数
+        TbItemParamItemExample example=new TbItemParamItemExample();
+        TbItemParamItemExample.Criteria criteria = example.createCriteria();
+        criteria.andItemIdEqualTo(item.getId());
+        List<TbItemParamItem> itemParamItemList= itemParamItemMapper.selectByExample(example);
+        TbItemParamItem itemParamItem=new TbItemParamItem();
+        if(itemParamItemList.size()>0){
+            itemParamItem=itemParamItemList.get(0);
+            itemParamItem.setItemId(item.getId());
+            itemParamItem.setParamData(itemParam);
+            itemParamItem.setUpdated(new Date());
+            itemParamItemMapper.updateByPrimaryKeyWithBLOBs(itemParamItem);
+        }
+
+
+        try {
+
+            //synData(item,itemDesc);
+
+            sendMsg(item.getId(),"update");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return PixmmResult.ok();
+    }
+
+    @Override
     public String getItemParamHtml(Long itemId) {
         // 根据商品id查询规格参数
         TbItemParamItemExample example = new TbItemParamItemExample();
@@ -164,11 +206,24 @@ public class ItemServiceImpl implements ItemService {
         TbItemDescExample example=new TbItemDescExample();
         TbItemDescExample.Criteria criteria = example.createCriteria();
         criteria.andItemIdEqualTo(itemId);
-        List<TbItemDesc> tbItemDescs = itemDescMapper.selectByExample(example);
+        List<TbItemDesc> tbItemDescs = itemDescMapper.selectByExampleWithBLOBs(example);
         if(tbItemDescs.size()>0){
             itemDesc=tbItemDescs.get(0);
         }
         return itemDesc;
+    }
+
+    @Override
+    public TbItemParamItem getItemParamItemByItemId(Long itemId) {
+        TbItemParamItem itemParamItem=new TbItemParamItem();
+        TbItemParamItemExample example=new TbItemParamItemExample();
+        TbItemParamItemExample.Criteria criteria = example.createCriteria();
+        criteria.andItemIdEqualTo(itemId);
+        List<TbItemParamItem> tbItemParamItems = itemParamItemMapper.selectByExampleWithBLOBs(example);
+        if(tbItemParamItems.size()>0){
+            itemParamItem=tbItemParamItems.get(0);
+        }
+        return itemParamItem;
     }
 
     /**

@@ -1,12 +1,0 @@
-
-tsquid:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰
-vsquid:S1488"\Immediately return this expression instead of assigning it to the temporary variable "item".(à†½ìÿÿÿÿÿ
-Xsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(ÅÄÒËúÿÿÿÿ
-osquid:UselessImportCheck"MRemove this unused import 'org.apache.solr.client.solrj.SolrServerException'.(¶ŒÞ¸
-Wsquid:UselessImportCheck"0Remove this unused import 'java.io.IOException'.(ªº»Úýÿÿÿÿ
-=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-Vsquid:UnusedPrivateMethod",Remove this unused private "synData" method.(ø±±ö8ºÛ€ÐÞ+
-nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÖÔ•÷
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8¥³íÏÞ+
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Áöø­8ºÛ€ÐÞ+
